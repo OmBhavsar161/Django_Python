@@ -1,13 +1,9 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo</title>
-    <link rel="stylesheet" href="{% static 'style.css' %}"">
-</head>
-<body>
-    <h1>Template of HTML loading in Django </h1>
-</body>
-</html>
+{% extends "layout.html" %}
+
+{% block title %}
+Home Page
+{% endblock %}
+
+{% block content %}
+Testing Layout in Django by using unnamed block. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius ipsam minima porro iste distinctio at deleniti nulla itaque repudiandae fuga quibusdam quas culpa, nam excepturi cumque soluta odit libero, blanditiis recusandae perspiciatis, cupiditate officia illo architecto! Maxime, ad possimus nobis deleniti repellendus odit itaque incidunt unde sapiente deserunt et ab.
+{% endblock %}
