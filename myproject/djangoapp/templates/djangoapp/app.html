@@ -1,9 +1,25 @@
 {% extends "layout.html" %}
+{% load static %}
 
 {% block title %}
 App Section
 {% endblock %}
 
-{% block content %}
-This is App Section 
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'app_section.css' %}">
 {% endblock %}
+
+{% block content %}
+<div class="tech-container">
+  {% for ele in data %}
+  <div class="tech-data">
+    <img src="{{ ele.image.url }}" alt="">
+    <h3>{{ ele.name }}</h3>
+    <h4>{{ ele.type }}</h4>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
+
+
